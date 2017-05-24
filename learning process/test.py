@@ -10,17 +10,5 @@ def multi_area(radius):
 # Call the area function
 print (multi_area(2)[0])
 
-first = 'Bob'
-print(first*4)
-print ('hello,\n world!')
-print ('hello,\t\t world!')
-n = 10
-while (n > 0): 
-    print (n)
-    if n == 9:
-        break
-    n = n - 1
-print ("Blastoff!?")
-n = 6
-for i in range(n):
-    print (i)
+print (list(reversed(range(5,-10,1))))
+    
