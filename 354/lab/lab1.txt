@@ -1,0 +1,159 @@
+1.
+print("Hello World!")
+
+2.
+B=[1,2,3,4]
+print len(B)
+
+3.
+L=["Hello",0.345,111333,44]
+print L
+
+4a.
+A=[1,2,3,4,5]
+L2=A[0:3]
+print L2
+
+4b.
+L3=A[-3:]
+print L3
+
+5a.
+L=["hello",23.45,45,"Brown",[756.45,34.5]]
+
+for i,elements in enumerate(L):
+	if isinstance(elements,int):
+		L[i]+=111
+print L
+
+5b.
+L=["hello",23.45,45,"Brown",[756.45,34.5]]
+L.insert(1,"new")
+print L
+
+5c.
+L=["hello",23.45,45,"Brown",[756.45,34.5]]
+L.insert(3,["old",33])
+print L
+
+6.
+"hello" 'hello' """hello""" '''hello'''
+
+7a.
+s1="Tony"
+s2="Vignaux"
+S = s1+s2
+print S
+
+7b.
+s1="Tony"
+s2="Vignaux"
+S = s1+" "+s2
+print S
+
+7c.
+print "First letter: "+S[0]
+print "Last letter: "+S[-1]
+
+8.
+L=" adfasdf dsafsad "
+M = L.strip(" ")
+print M
+
+
+9
+L="fadsfasdf\n"
+if "\n" in L:
+	print "1"
+S= L.rstrip("\n")
+if "\n" not in S:
+	print "2"
+
+
+from __future__ import print_function
+for i in xrange(0,10): 
+	print (".", end='')
+
+S='test string'
+print S,
+
+10a.
+d={'name':'Joe Blogps','weight':81}
+d['name']='Joe Bloggs'
+print d
+
+10b.
+d={'name':'Joe Blogps','weight':81}
+d['height']=1.90
+
+10c.
+print d
+
+kys=d.keys()
+for k in kys:
+	print k,d[k]
+
+kys= sprted(d.keys())
+for k in kys:
+	print k,d[k]
+
+
+
+
+11.
+value=raw_input("Enter a non-negative integer")
+i = int(value)
+if i==0:
+	print 'zero'
+elif i==1:
+	print 'one'
+else:
+	print 'more than 1'
+
+12.
+for i in range(10):
+	print i
+
+13.
+for i in xrange(10,0,-1):
+	print i
+
+14a.
+import random
+
+value=raw_input("Enter a positive integer")
+n = int(value)
+random.seed(111)
+L = random.sample(range(1000),n)
+print L
+L1 =random.sample(range(1000),n)
+print L1
+
+--
+import random
+
+random.seed(111)
+n=30
+L=[]
+total=0.0
+for k in range(n):
+	r =random.random()
+	L.append(r)
+	total+=r
+	print L
+	print total
+14.05
+comment - we would expect the total of 30 U(0,1) random numbers to e approximately 30*0.5 =15 so this looks fine.
+
+
+15
+import random
+random.seed(1)
+L=range(10)
+n = len(L)
+for i in range(n-1):
+	k =random.randint(i,n-1)
+	t =L[i]
+	L[i] = L[k]
+	L[k] = t
+print L
